@@ -48,56 +48,44 @@
                 <a class="nav-item nav-link active" href="#">Blog</a>
                 <a class="nav-item nav-link active" href="#">About us</a>
                 <a class="nav-item nav-link active" href="#">Services</a>
-                <a class="nav-item nav-link active" href="#">Contact us</a>
-                <a class="nav-item nav-link active" href="#">Admin</a>
+
 
 
             </div>
         </div>
+        <ul class="navbar-nav ml-auto">
+            <!-- Authentication Links -->
+            @guest
+                <li class="nav-item">
+                    <a class="nav-item nav-link active" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link active" href="{{ route('register') }}">{{ __('Register') }}</a>
+                </li>
+            @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-item nav-link active dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
 
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @endguest
+        </ul>
     </nav>
 </div>
-<div class="col-md-6 offset-2">
-<h5>Procedure</h5>
-<iframe id="player" src="http://www.youtube.com/embed/ee-uHT52Px0?enablejsapi=1&origin=http://example.com"
-        type="text/html" width="640" height="390" frameborder="0" allowfullscreen>
 
-</iframe>
-<p>Uitleg waarom het verstandig kan zijn om een overlijdensrisico verzekering
-    <span onmouseover="myFunction()"><i style="color: #c1a801" class="fas fa-lightbulb"></i></span></p>
 
-<h5>Kwaliteit van het advies</h5>
-
-<p>Uitleg waarom het Kwaliteit van het advies belangrijk is.
-    <span onmouseover="myFunction()"><i style="color: #c1a801" class="fas fa-lightbulb"></i></span></p>
-
-<h5>Risico's van een Hypotheek</h5>
-
-<p>Uitleg over de risico's van een Hypotheek.
-    <span onmouseover="myFunction()"><i style="color: #c1a801" class="fas fa-lightbulb"></i></span></p>
-
-<h5>Arbeidsongeschiktheid</h5>
-
-<p>Uitleg Arbeidsongeschiktheid.
-    <span onmouseover="myFunction()"><i style="color: #c1a801" class="fas fa-lightbulb"></i></span> </p>
-
-<h5>Overige risico's </h5>
-
-<p>Uitleg Overige risico's .
-    <span onmouseover="myFunction()"><i style="color: #c1a801" class="fas fa-lightbulb"></i></span></p>
-
-<h5>Pensioen</h5>
-
-<p>Uitleg pensioen.
-    <span onmouseover="myFunction()"><i style="color: #c1a801" class="fas fa-lightbulb"></i></span></p>
-
-<h5>Rentevast periode</h5>
-
-<p>Uitleg rentevast periode.
-    <span onmouseover="myFunction()"><i style="color: #c1a801" class="fas fa-lightbulb"></i></span> </p>
-
-</div>
-@yield('home')
 <script>
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
@@ -140,9 +128,21 @@
         player.stopVideo();
     }
 </script>
+<script type="text/javascript" >
+    function myFunction() {
+
+
+        return alert('Een overlijdensrisicoverzekering (ook risicoverzekering genoemd) is een Nederlandse vorm van levensverzekering.' +
+            ' Een tijdelijke overlijdensrisicoverzekering keert het vooraf afgesproken bedrag ' +
+            'uit indien de verzekerde voor een bepaalde datum overlijdt. Een levenslange overlijdensrisicoverzekering ' +
+            'keert het vooraf afgesproken bedrag uit wanneer de verzekerde overlijdt, ongeacht wanneer dit is.');
+    }
+
+
+</script>
 
 
 
-
+@yield('home')
 </body>
 </html>

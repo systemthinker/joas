@@ -21,6 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/vraag', 'VraagEenController');
 Route::get('/vraag/create', 'VraagEenController@create')->name('hypotheekBerekenen');
+Route::get('/dashboard', function(){
+    return view('dashboard');
+});
 
 Route::view('/woning', 'woning')->name('woning');
 Route::view('/doorstromer', 'doorstromer.doorstromer')->name('doorstromer');

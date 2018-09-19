@@ -192,3 +192,53 @@ img.middleRowImage {
 .closebtn:hover {
     color: black;
 }
+
+.vragenSchema > h5 {
+    height: 73px;
+    line-height: 73px;
+    width: 100%;
+    text-align: center;
+    background: #5cb85c;
+    border-radius: 5px;
+    color: white;
+    margin:0;
+
+
+}
+
+.vragenSchema {
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+.vragenSchema > dl {
+margin:0;
+}
+.vragenSchema > dl > dt > span {
+    display:inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 20%;
+    text-align: center;
+    background-color: rgba(92, 184, 92,0.2);
+
+
+}
+
+.vragenSchema > dl > dt > text {
+    padding-left: 5%;
+    font-family: roboto, sans-serif;
+    color: #4e555b;
+}
+
+.vragenSchema > dl > dt:hover {
+    background-color: rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+#dashboardRow {
+    margin-top: 10%;
+}
+
+.container-fluid {
+    margin-top: 10px;
+}
