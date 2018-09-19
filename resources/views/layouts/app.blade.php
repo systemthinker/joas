@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ URL::to('/css') }}/custom.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
     <div id="app">

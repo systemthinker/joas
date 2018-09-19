@@ -69,7 +69,12 @@
             <br>
             <h2>  interactief advies</h2>
             <br>
+            @guest
+                <a href="{{route('login')}}"><button type="button" class="btn btn-primary" id="buttonTop">Maak uw account of login</button></a>
+                @endguest
+            @auth
             <a href="{{route('hypotheekBerekenen')}}"><button type="button" class="btn btn-primary" id="buttonTop">Hypotheek berekenen</button></a>
+                @endauth
         </div>
     </div>
 

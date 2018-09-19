@@ -46,6 +46,18 @@
     color: grey;
 }
 
+#buttonLogin {
+
+    color: white;
+    font-size: 1.3em;
+    font-weight: 550;
+
+    background-color: #f75a00;
+    border: none;
+}
+
+
+
 * {
     padding: 0px;
     margin: 0px;
