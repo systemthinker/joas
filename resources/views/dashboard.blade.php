@@ -19,8 +19,12 @@
                     </dl>
                 </div>
             </div>
-            <div class="col-md-4 offset-2">
-                @include('layouts.procedure')
+
+            <div class="col-md-5 offset-2">
+                <div class="informatieSchema">
+                    <h5>Informatie over uw situatie</h5>
+                </div>
+                @include('layoutsDashboard.1SoortWoning')
             </div>
         </div>
     </div>
