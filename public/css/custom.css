@@ -257,20 +257,15 @@ margin:0;
 .optie {
     margin-top: 15px;
     height: 70px;
-
     vertical-align: middle;
     text-align: center;
     width: 20%;
     border: 1px solid grey;
+
 }
 
 .optie:hover {
     background-color: #50b255;
-    cursor: pointer;
-}
-
-.optieActive {
-    background-color: #41a046;
     cursor: pointer;
 }
 
@@ -288,6 +283,83 @@ margin:0;
 
 .resultVraag {
     margin-top: 4%;
+}
+
+.optie.active {
+    background-color: #41a046;
+    cursor: pointer;
+}
+
+.buttonOrange {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 550;
+    background-color: #f75a00;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F78829), to(#f75a00));
+    background: -moz-linear-gradient(19% 75% 90deg,#f75a00, #F78829);
+
+
+
+}
+.buttonOrange:hover {
+    background-color: white;
+    color: grey;
+}
+
+.buttonOrange.right
+ {
+
+    padding: 0;
+    border: none;
+}
+#pointerLeft {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F78829), to(#f75a00));*/
+    /*background: -moz-linear-gradient(19% 75% 90deg,#f75a00, #F78829);*/
+    background: linear-gradient(19% 75% 90deg,#f75a00, #F78829);
+    /*background:red;*/
+
+}
+#pointerLeft:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+#pointerLeft:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 23px solid #f77918;
+
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+
+
+}
+
+
+.buttonOrange.left{
+    padding: 0;
+    border: none;
+    text-decoration: none;
+
+    outline-style: none;
+}
+
+.buttonOrange.hidden {
+
+    display: none !important;
 }
 
 

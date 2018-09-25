@@ -23,9 +23,7 @@
             <div class="col-md-5 offset-2">
                 <div class="informatieSchema">
                     <h5>Informatie over uw situatie</h5>
-                </div>
-                @include('layoutsDashboard.1SoortWoning')
-            </div>
+                </div>@include('layoutsDashboard.1SoortWoning')</div>
         </div>
     </div>
 
