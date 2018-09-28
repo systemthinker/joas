@@ -255,7 +255,7 @@ margin:0;
 }
 
 .optie {
-    margin-top: 15px;
+    /*margin-top: 15px;*/
     height: 70px;
     vertical-align: middle;
     text-align: center;
@@ -264,10 +264,7 @@ margin:0;
 
 }
 
-.optie:hover {
-    background-color: #50b255;
-    cursor: pointer;
-}
+
 
 .optie h6 {
     padding-top: 9%;
@@ -278,7 +275,7 @@ margin:0;
 
 .rowVraag {
     width: 100%;
-    margin-left: 0.5%;
+    margin-left: 0.1%;
 }
 
 .resultVraag {
@@ -286,8 +283,13 @@ margin:0;
 }
 
 .optie.active {
-    background-color: #41a046;
-    cursor: pointer;
+    background-color: #41a046 !important;
+    cursor: pointer !important;
+}
+
+.optie:hover {
+    background-color: rgba(65, 160, 70, 0.64) !important ;
+    cursor: pointer !important;
 }
 
 .buttonOrange {
@@ -297,6 +299,7 @@ margin:0;
     background-color: #f75a00;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F78829), to(#f75a00));
     background: -moz-linear-gradient(19% 75% 90deg,#f75a00, #F78829);
+    height: 150%;
 
 
 
@@ -309,57 +312,27 @@ margin:0;
 .buttonOrange.right
  {
 
-    padding: 0;
-    border: none;
-}
-#pointerLeft {
-    width: 200px;
-    height: 40px;
-    position: relative;
-    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F78829), to(#f75a00));*/
-    /*background: -moz-linear-gradient(19% 75% 90deg,#f75a00, #F78829);*/
-    background: linear-gradient(19% 75% 90deg,#f75a00, #F78829);
-    /*background:red;*/
-
-}
-#pointerLeft:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-}
-#pointerLeft:before {
-    content: "";
-    position: absolute;
-    right: -20px;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 23px solid #f77918;
-
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-
-
 }
 
 
 .buttonOrange.left{
-    padding: 0;
-    border: none;
-    text-decoration: none;
 
-    outline-style: none;
 }
 
 .buttonOrange.hidden {
 
     display: none !important;
+}
+
+dt.procesTab.active {
+
+    background: rgba(0,0,0,0.2);
+}
+
+.rightRowDashboard {
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding:0;
 }
 
 
