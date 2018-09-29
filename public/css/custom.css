@@ -335,6 +335,14 @@ dt.procesTab.active {
     padding:0;
 }
 
+.rightRowDashboard span {
+    display: none !important;
+}
+
+span.active {
+    display: initial !important;
+}
+
 
 
 

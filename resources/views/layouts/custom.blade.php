@@ -129,7 +129,7 @@
     }
 </script>
 <script type="text/javascript" >
-    function myFunction() {
+     function  myFunction() {
 
 
         return alert('Een overlijdensrisicoverzekering (ook risicoverzekering genoemd) is een Nederlandse vorm van levensverzekering.' +

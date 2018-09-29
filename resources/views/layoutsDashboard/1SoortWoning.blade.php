@@ -19,10 +19,7 @@
         </div>
 
 <script type="text/javascript">
-    $('dt.procesTab').click(function(){
-        $('dt.procesTab').removeClass('active');
-        $(this).addClass('active');
-    });
+
 
 
     $('.optie').click(function(){
@@ -31,13 +28,16 @@
         $('.buttonOrange').removeClass('hidden');
         var clickedBtnID = $(this).index();
           result.innerHTML = text[clickedBtnID];
+
     });
 
+
     var result = document.getElementById('result');
-    var string1 = "<h5>Aflosvormen starter</h5>" + "<p>Uitleg Aflosvormen starter.<span onmouseover=\"myFunction()\"><i style=\"color: #c1a801\" class=\"fas fa-lightbulb\"></i></span></p>";
+    var string1 = "<h5>Aflosvormen starter</h5>" + "<p>Uitleg Aflosvormen starter."+"<span onmouseover=\"myFunction()\"><i style=\"color: #c1a801\" class=\"fas fa-lightbulb\"></i></span></p>";
     var string2 = "<h5>Aflosvormen Doorstromer</h5>" + "<p>Uitleg Aflosvormen Doorstromer.<span onmouseover=\"myFunction()\"><i style=\"color: #c1a801\" class=\"fas fa-lightbulb\"></i></span></p> ";
     var string3 = "<h5>Aflosvormen Oversluiter</h5>" + "<p>Uitleg Aflosvormen Oversluiter.<span onmouseover=\"myFunction()\"><i style=\"color: #c1a801\" class=\"fas fa-lightbulb\"></i></span></p> ";
     var text = [string1,string2,string3];
+
 
 
 </script>

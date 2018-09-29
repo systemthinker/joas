@@ -20,12 +20,38 @@
                 </div>
             </div>
 
-            <div class="col-md-5 offset-2 rightRowDashboard">
+            <div class="col-md-5 offset-2 rightRowDashboard ">
                 <div class="informatieSchema">
                     <h5>Informatie over uw situatie</h5>
-                </div>@include('layoutsDashboard.1SoortWoning')</div>
+                    <h5>{{$dashboardString->example}}</h5>
+                </div>
+                <span class="active">@include('layoutsDashboard.1SoortWoning')</span>
+                <span >@include('layoutsDashboard.2Gezinssituatie')</span>
+                {{--<span class="">@include('layoutsDashboard.3SoortWoning')</span>--}}
+                {{--<span class="">@include('layoutsDashboard.4SoortWoning')</span>--}}
+                {{--<span class="">@include('layoutsDashboard.5SoortWoning')</span>--}}
+                {{--<span class="">@include('layoutsDashboard.6SoortWoning')</span>--}}
+                {{--<span class="">@include('layoutsDashboard.7SoortWoning')</span>--}}
+                {{--<span class="">@include('layoutsDashboard.8SoortWoning')</span>--}}
+                {{--<span class="">@include('layoutsDashboard.9SoortWoning')</span>--}}
+
+
+            </div>
         </div>
     </div>
 
+    <script>
+        $('dt.procesTab').click(function(){
+            $('dt.procesTab').removeClass('active');
+            $(this).addClass('active');
+            var clickedTabId = $(this).index();
+
+            $('.rightRowDashboard span').removeClass('active');
+            $('.rightRowDashboard span').eq(clickedTabId).addClass('active');
+
+        });
+
+
+    </script>
 
     @endsection
