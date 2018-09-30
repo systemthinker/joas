@@ -27,9 +27,9 @@ for(var i=0; i<results.length;i++) {
 
     var opties = document.getElementsByClassName('optie');
     var results = document.getElementsByClassName('resultVraag');
-    var string1 = '<h5>Aflosvormen starter</h5><p>Uitleg Aflosvormen starter.</p>';
-    var string2 = "<h5>Aflosvormen Doorstromer</h5>" + "<p>Uitleg Aflosvormen Doorstromer.</p> ";
-    var string3 = "<h5>Aflosvormen Oversluiter</h5>" + "<p>Uitleg Aflosvormen Oversluiter.</p> ";
+    var string1 = '<h5>Aflosvormen starter</h5><p>Uitleg Aflosvormen starter.<i onmouseover="myFunction()" style="color: #c1a801; width: 10px; height: 10px;" class="fas fa-lightbulb"></i></p>';
+    var string2 = "<h5>Aflosvormen Doorstromer</h5>" + "<p>Uitleg Aflosvormen Doorstromer.<i onmouseover=\"myFunction()\" style=\"color: #c1a801; width: 10px; height: 10px;\" class=\"fas fa-lightbulb\"></i></p> ";
+    var string3 = "<h5>Aflosvormen Oversluiter</h5>" + "<p>Uitleg Aflosvormen Oversluiter.<i onmouseover=\"myFunction()\" style=\"color: #c1a801; width: 10px; height: 10px;\" class=\"fas fa-lightbulb\"></i></p> ";
     var text = [string1,string2,string3];
 
     $('dt.procesTab').click(function(){

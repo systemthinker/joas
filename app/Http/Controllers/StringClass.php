@@ -64,4 +64,8 @@ function getOndernemerString(){
 </div>';
 }
 
+function getDashboardRightColumnBodyString(){
+     return ;
+}
+
 

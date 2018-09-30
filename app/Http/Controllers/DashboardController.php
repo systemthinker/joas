@@ -27,6 +27,7 @@ class DashboardController extends Controller
         $dashboardString->gezinssituatie = getGezinssituatieString();
         $dashboardString->ondernemer = getOndernemerString();
 
+
         return view('dashboard',compact('dashboardString'));
     }
 

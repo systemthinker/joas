@@ -111,7 +111,7 @@
 
 
 <div class="container containerTop">
-    <div class="row">
+    <div class="row rowUnderFrontPagePicture">
         <div class="col-sm-4">
             <div>
                 <h2>Wie zijn wij?</h2>
@@ -171,7 +171,7 @@
 
 
 
-    <div class="row ">
+    <div class="row columsBottomRow">
         <div class="col-md-3 columsBottom">
             <i class="fas fa-address-book fa-5x"></i>
             <h4>Adressen</h4>

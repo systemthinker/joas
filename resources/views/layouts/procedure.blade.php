@@ -10,7 +10,7 @@
     <h5>Kwaliteit van het advies</h5>
 
     <p>Uitleg waarom het Kwaliteit van het advies belangrijk is.
-        <span onmouseover="myFunction()"><i style="color: #c1a801" class="fas fa-lightbulb"></i></span></p>
+        </p>
 
     <h5>Risico's van een Hypotheek</h5>
 
