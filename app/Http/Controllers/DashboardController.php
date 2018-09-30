@@ -1,11 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
+include('StringClass.php');
+
+
+
 
 use Illuminate\Http\Request;
 
+
+
 class DashboardController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +22,10 @@ class DashboardController extends Controller
     public function index()
     {
         $dashboardString = new \stdClass();
-        $dashboardString->example = 'hi';
+
+        $dashboardString->soortWoning = getSoortwoningString();
+        $dashboardString->gezinssituatie = getGezinssituatieString();
+        $dashboardString->ondernemer = getOndernemerString();
 
         return view('dashboard',compact('dashboardString'));
     }

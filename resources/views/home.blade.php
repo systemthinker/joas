@@ -100,7 +100,7 @@
                 <a href="{{route('login')}}"><button type="button" class="btn btn-primary" id="buttonTop">Maak uw account of login</button></a>
                 @endguest
             @auth
-            <a href="{{route('hypotheekBerekenen')}}"><button type="button" class="btn btn-primary" id="buttonTop">Hypotheek berekenen</button></a>
+            <a href="{{route('dashboard')}}"><button type="button" class="btn btn-primary" id="buttonTop">Hypotheek berekenen</button></a>
                 @endauth
         </div>
     </div>
