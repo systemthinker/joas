@@ -7,7 +7,7 @@
     $('.optie').click(function(){
         var clickedBtnID = $(this).index();
         var index = $('dt.procesTab.active').index();
-        console.log(clickedBtnID);
+
         for(var i=0; i<opties.length;i++) {
             opties[i].style.display = "none";
         }
@@ -34,7 +34,7 @@ for(var i=0; i<results.length;i++) {
 
     $('dt.procesTab').click(function(){
         var clickedTabId = $(this).index();
-        console.log(clickedTabId);
+
         $('dt.procesTab').removeClass('active');
         $('dt.procesTab').eq(clickedTabId).addClass('active');
         $('.rightRowDashboard span').removeClass('active');

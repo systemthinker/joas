@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-include('StringClass.php');
+include('StringClass.blade.php');
 
 
-
-
+use App\Role;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 
 class DashboardController extends Controller
@@ -21,14 +21,17 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $dashboardString = new \stdClass();
 
+        $dashboardString = new \stdClass();
         $dashboardString->soortWoning = getSoortwoningString();
         $dashboardString->gezinssituatie = getGezinssituatieString();
         $dashboardString->ondernemer = getOndernemerString();
 
-
-        return view('dashboard',compact('dashboardString'));
+        if($message = Route::has('login') && Auth::check()){
+            $user = Auth::user()->name;
+            $message= 'Welkom op de pagina '. strtok($user," ")."!";
+        }
+        return view('dashboard.index',compact('dashboardString','message'));
     }
 
     /**
@@ -38,7 +41,7 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        //
+        echo "hi";
     }
 
     /**
@@ -49,7 +52,8 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Role::create($request->all());
+        return redirect('/dashboard');
     }
 
     /**

@@ -14,9 +14,9 @@ class AddColumnsToRolesTable extends Migration
     public function up()
     {
         Schema::table('roles', function (Blueprint $table) {
-        $table->string('soortwoning');
-        $table->string('gezinssituatie');
-        $table->string('ondernemer');
+        $table->string('soortwoning')->nullable();
+        $table->string('gezinssituatie')->nullable();
+        $table->string('ondernemer')->nullable();
         });
     }
 

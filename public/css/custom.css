@@ -88,6 +88,42 @@ nav.navbar {
     border-right: 10px solid rgba(0,0,0,0);
     display: inline-block;
     white-space: nowrap;
+    z-index: 200;
+
+}
+
+.dropdown-menu.dropdown-menu-right {
+    position: fixed;
+}
+
+
+.nav-item.nav-link:hover {
+
+    font-weight: bold;
+    background-color: rgba(247, 121, 24, 0.22);
+    border-radius: 20%;
+}
+a.dropdown-it {
+    font-weight: bold;
+    font-size: 1.2em;
+
+}
+
+a.dropdown-it:hover {
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: rgba(247, 121, 24, 0.22);
+
+
+}
+
+.dropdown-menu.dropdown-menu-right.show {
+    height: 38px;
+    padding: 0;
+
+    margin:0;
+    color: red;
+
 }
 
 .background {
@@ -142,24 +178,12 @@ img.middleRowImage {
     margin-top: 50px;
     margin-left: 0;
     margin-right: 0;
-
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bottomImage.jpg");
     background-repeat: no-repeat;
-
-
-    /*background-image: url("../images/bottomImage.jpg");*/
-    /*background-image: url("../images/bottomImage.jpg");*/
-    /*background-image: url("../images/bottomImage.jpg"), linear-gradient(#eb01a5, #d13531);*/
-    /*background: rgba(0, 0, 0, 0.25);*/
-    /*background: linear-gradient(grey,grey);*/
     min-height: 400px;
     height: 100%;
     width: 100%;
     background-size: 100% auto;
-
-
-
-
 }
 .columsBottomRow {
     margin-top: 2%;
@@ -171,7 +195,7 @@ img.middleRowImage {
 }
 
 .columsBottom i {
-    margin-left: 37%;
+    margin-left: 40%;
     margin-bottom: 4%;
     color: #F78829;
 
@@ -196,15 +220,6 @@ img.middleRowImage {
     width: 100%;
 }
 
-/* The alert message box */
-.alert {
-    padding: 20px;
-    background-color: #f44336; /* Red */
-    color: white;
-    margin-bottom: 15px;
-}
-
-/* The close button */
 .closebtn {
     margin-left: 15px;
     color: white;
@@ -216,7 +231,6 @@ img.middleRowImage {
     transition: 0.3s;
 }
 
-/* When moving the mouse over the close button */
 .closebtn:hover {
     color: black;
 }
@@ -283,21 +297,15 @@ margin:0;
 }
 
 .optie {
-    /*margin-top: 15px;*/
+
     height: 70px;
     vertical-align: middle;
     text-align: center;
     width: 20%;
     border: 1px solid grey;
-
 }
-
-
-
 .optie h6 {
     padding-top: 9%;
-
-
     text-align: center;
 }
 
@@ -328,15 +336,11 @@ margin:0;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F78829), to(#f75a00));
     background: -moz-linear-gradient(19% 75% 90deg,#f75a00, #F78829);
     height: 150%;
-
-
-
 }
 .buttonOrange:hover {
     background-color: white;
     color: grey;
 }
-
 .buttonOrange.right
  {
 
@@ -373,6 +377,21 @@ dt.procesTab.active {
 
 span.active {
     display: initial !important;
+}
+
+body:after {
+    content: 'widescreen';
+    display: none;
+}
+
+@media screen and (min-width: 991px){
+    #navbarDropdownLogout {
+        display: none !important;
+    }
+    #navbarDropdown {
+        display: initial !important;
+    }
+
 }
 
 

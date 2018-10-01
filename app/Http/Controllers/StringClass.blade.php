@@ -4,24 +4,37 @@
 
  function getSoortwoningString()
  {
- return  '<div class="row rowVraag">
-    <div class="col-sm optie" >
-        <h6>Koopt u een eerste woning?</h6>
+ return  '
+
+
+    <div class="row rowVraag">
+        <div class="col-sm optie" >
+            <h6>Koopt u een eerste woning?</h6>
+        </div>
+        <div class="col-sm optie" >
+            <h6>Bent u een doorstromer?</h6>
+        </div>
+       <div class="col-sm optie"  >
+
+            <h6>Wilt u oversluiten?</h6>
+
+              <input type="hidden" name="soortwoning" value="oversluiten">
+
+
+
+
+        </div>
     </div>
-    <div class="col-sm optie" >
-        <h6>Bent u een doorstromer?</h6>
+    <div class="resultVraag"></div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4 offset-8 btn btn-lg buttonOrange hidden right border-0" onclick="event.preventDefault();
+                                                     document.getElementById(\"soortWoning\").submit();">verder </div>
+        </div>
+
     </div>
-    <div class="col-sm optie" >
-        <h6>Wilt u oversluiten?</h6>
-    </div>
-</div>
-<div class="resultVraag"></div>
-<div class="container">
-    <div class="row">
-        
-        <div class="col-sm-4 offset-8 btn btn-lg buttonOrange hidden right border-0 "  >verder</div>
-    </div>
-</div>';
+' ;
  }
 
  function getGezinssituatieString(){

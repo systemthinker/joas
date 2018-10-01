@@ -1,8 +1,15 @@
-@extends('layouts.custom')
-@section('home')
+@include('layouts.header')
+@include('layouts.navbar')
+<div style="margin-top: 30px"></div>
+@if($message)
+    <div style="text-align: center;" role="alert" class="alert alert-success">
+        {{ $message }}
+    </div>
+@endif
+    <div  class="container">
 
-    <div class="container">
         <div class="row" id="dashboardRow">
+
             <div class="col-md-4 offset-1">
                 <div class="vragenSchema">
                     <h5>Bekijk het gehele proces</h5>
@@ -28,9 +35,39 @@
 
                 </div>
 
-                <span class="active"><?php echo $dashboardString->soortWoning   ?></span>
-                <span class=""><?php echo $dashboardString->gezinssituatie   ?></span>
-                <span class=""><?php echo $dashboardString->ondernemer   ?></span>
+   <form id="soortWoning" action="/dashboard" method="post">
+       <input type="hidden" name="soortwoning" value="oversluiten">@csrf<span class="active">  <div class="row rowVraag">
+        <div class="col-sm optie" >
+            <h6>Koopt u een eerste woning?</h6>
+        </div>
+        <div class="col-sm optie" >
+            <h6>Bent u een doorstromer?</h6>
+        </div>
+       <div class="col-sm optie"  >
+
+            <h6>Wilt u oversluiten?</h6>
+
+
+
+
+
+
+        </div>
+    </div>
+    <div class="resultVraag"></div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4 offset-8 btn btn-lg buttonOrange hidden right border-0" onclick="event.preventDefault();
+                                                     document.getElementById('soortWoning').submit();">verder </div>
+        </div>
+
+            </div> </span>
+
+</form>
+                {{--</span>--}}
+                <form class="">@csrf<span class=""><?php echo $dashboardString->gezinssituatie   ?></span></form>
+                <form class="">@csrf<span class=""><?php echo $dashboardString->ondernemer   ?></span></form>
                 {{--<span class="">@include('layoutsDashboard.4SoortWoning')</span>--}}
                 {{--<span class="">@include('layoutsDashboard.5SoortWoning')</span>--}}
                 {{--<span class="">@include('layoutsDashboard.6SoortWoning')</span>--}}
@@ -43,6 +80,5 @@
         </div>
     </div>
 
+@include('layouts.scripts')
 
-
-    @endsection
