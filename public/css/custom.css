@@ -101,7 +101,7 @@ nav.navbar {
 
     font-weight: bold;
     background-color: rgba(247, 121, 24, 0.22);
-    border-radius: 20%;
+    border-radius: 2%;
 }
 a.dropdown-it {
     font-weight: bold;
@@ -122,7 +122,7 @@ a.dropdown-it:hover {
     padding: 0;
 
     margin:0;
-    color: red;
+ 
 
 }
 
@@ -384,11 +384,18 @@ body:after {
     display: none;
 }
 
+#navbarDropdown  {
+    margin-right: 30px;
+
+
+}
+
 @media screen and (min-width: 991px){
     #navbarDropdownLogout {
         display: none !important;
     }
     #navbarDropdown {
+
         display: initial !important;
     }
 

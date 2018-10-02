@@ -35,7 +35,7 @@
 
                 </div>
 
-   <form id="soortWoning" action="/dashboard" method="post">
+<form id="soortWoning" action="{{route('dashboard')}}" method="post">
        <input type="hidden" name="soortwoning" value="oversluiten">@csrf<span class="active">  <div class="row rowVraag">
         <div class="col-sm optie" >
             <h6>Koopt u een eerste woning?</h6>
@@ -46,35 +46,69 @@
        <div class="col-sm optie"  >
 
             <h6>Wilt u oversluiten?</h6>
-
-
-
-
-
-
         </div>
     </div>
     <div class="resultVraag"></div>
     <div class="container">
         <div class="row">
 
-            <div class="col-sm-4 offset-8 btn btn-lg buttonOrange hidden right border-0" onclick="event.preventDefault();
-                                                     document.getElementById('soortWoning').submit();">verder </div>
+            <div class="col-sm-4 offset-8 btn btn-lg buttonOrange hidden right border-0"
+                 {{--onclick="event.preventDefault();--}}
+                 {{--document.getElementById('soortWoning').submit();"--}}
+            >verder </div>
         </div>
 
             </div> </span>
 
 </form>
                 {{--</span>--}}
-                <form class="">@csrf<span class=""><?php echo $dashboardString->gezinssituatie   ?></span></form>
-                <form class="">@csrf<span class=""><?php echo $dashboardString->ondernemer   ?></span></form>
-                {{--<span class="">@include('layoutsDashboard.4SoortWoning')</span>--}}
-                {{--<span class="">@include('layoutsDashboard.5SoortWoning')</span>--}}
-                {{--<span class="">@include('layoutsDashboard.6SoortWoning')</span>--}}
-                {{--<span class="">@include('layoutsDashboard.7SoortWoning')</span>--}}
-                {{--<span class="">@include('layoutsDashboard.8SoortWoning')</span>--}}
-                {{--<span class="">@include('layoutsDashboard.9SoortWoning')</span>--}}
+<form class="">@csrf
+    <span class="">
+        <div class="row rowVraag">
+            <div class="col-sm optie" >
+                <h6>U bent alleenstaand</h6>
+            </div>
+            <div class="col-sm optie" >
+                <h6>U bent alleenstaand met kind</h6>
+            </div>
+            <div class="col-sm optie" >
+                <h6>U bent samen met uw partner</h6>
+            </div>
+        </div>
+            <div class="resultVraag"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 btn btn-lg buttonOrange hidden left border-0"  >terug</div>
+                        <div class="col-sm-4 offset-4 btn btn-lg buttonOrange hidden right border-0 "  >verder</div>
+                    </div>
+                </div>
+    </span>
+</form>
 
+<form class="">@csrf
+    <span class="">
+        <div class="row rowVraag">
+            <div class="col-sm optie" >
+                <h6>U bent ondernemer</h6>
+            </div>
+            <div class="col-sm optie" >
+                <h6>U bent geen ondernemer</h6>
+            </div>
+
+        </div>
+        <div class="resultVraag"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 btn btn-lg buttonOrange hidden left border-0"  >terug</div>
+                <div class="col-sm-4 offset-4 btn btn-lg buttonOrange hidden right border-0 "  >verder</div>
+            </div>
+        </div>
+
+
+
+
+    </span>
+ </form>
                 @include('layoutsDashboard.functions')
             </div>
         </div>

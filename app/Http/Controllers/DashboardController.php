@@ -23,9 +23,9 @@ class DashboardController extends Controller
     {
 
         $dashboardString = new \stdClass();
-        $dashboardString->soortWoning = getSoortwoningString();
-        $dashboardString->gezinssituatie = getGezinssituatieString();
-        $dashboardString->ondernemer = getOndernemerString();
+//        $dashboardString->soortWoning = getSoortwoningString();
+//        $dashboardString->gezinssituatie = getGezinssituatieString();
+//        $dashboardString->ondernemer = getOndernemerString();
 
         if($message = Route::has('login') && Auth::check()){
             $user = Auth::user()->name;
