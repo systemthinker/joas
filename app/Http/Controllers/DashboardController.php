@@ -5,6 +5,7 @@ include('StringClass.blade.php');
 
 
 use App\Role;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -23,15 +24,30 @@ class DashboardController extends Controller
     {
 
         $dashboardString = new \stdClass();
-//        $dashboardString->soortWoning = getSoortwoningString();
-//        $dashboardString->gezinssituatie = getGezinssituatieString();
-//        $dashboardString->ondernemer = getOndernemerString();
 
+        $user_id = auth()->id();
         if($message = Route::has('login') && Auth::check()){
-            $user = Auth::user()->name;
-            $message= 'Welkom op de pagina '. strtok($user," ")."!";
+            $user = Auth::user();
+                $userName = $user->name;
+            $message= 'Welkom op de pagina '. strtok($userName," ")."!";
+            $userRoles = $user->roles;
+
+//            foreach($userRoles as $role){
+//                echo $role;
+//            }
+
         }
-        return view('dashboard.index',compact('dashboardString','message'));
+
+        $user = User::findOrFail($user_id);
+
+        forEach($user->roles as $role){
+           $ondernemer = $role->ondernemer;
+           $soortWoning = $role->soortwoning;
+        }
+
+        return view('dashboard.index',compact('dashboardString','message','ondernemer','soortWoning'));
+
+
     }
 
     /**
@@ -52,7 +68,18 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        Role::create($request->all());
+        $user_id = auth()->id();
+
+        $role = Role::whereUserId($user_id);
+
+
+        $role->update($request->all());
+
+
+
+
+
+
         return redirect('/dashboard');
     }
 

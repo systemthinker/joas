@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -79,26 +80,32 @@ class RegisterController extends Controller
 
     protected function registered(Request $request, $user)
     {
-        $path = 'attachmentsWelkomMail/';
-        $attachments = [$path.'UwDienstverlengingsdocumentWijzer.pdf',
-                        $path.'UwdienstverleningsdocumentHypotheek.pdf',
-                        $path.'UwDienstverleningsdocumentRisico.pdf',
-                        $path.'UwDienstverleningsdocumentVermogen.pdf',
-            ];
+//        $path = 'attachmentsWelkomMail/';
+//        $attachments = [$path.'UwDienstverlengingsdocumentWijzer.pdf',
+//                        $path.'UwdienstverleningsdocumentHypotheek.pdf',
+//                        $path.'UwDienstverleningsdocumentRisico.pdf',
+//                        $path.'UwDienstverleningsdocumentVermogen.pdf',
+//            ];
+//
+//
+//
+////        Mail::send('emails.send', ['user' => $user],  function($msg) use ($user,$attachments) {
+////
+////            $email = $msg->to($user->email)->subject('Beste ' . strtok($user->name, " ") . ' bedankt voor je aanvraag!');
+////
+////            foreach($attachments as $attachment){
+////                $email->attach($attachment);
+////            }
+////
+////
+////
+////        });
+
+        $user_id = auth()->id();
 
 
 
-        Mail::send('emails.send', ['user' => $user],  function($msg) use ($user,$attachments) {
-
-            $email = $msg->to($user->email)->subject('Beste ' . strtok($user->name, " ") . ' bedankt voor je aanvraag!');
-
-            foreach($attachments as $attachment){
-                $email->attach($attachment);
-            }
-
-
-
-        });
+        Role::create(['user_id'=>$user_id]);
 
 
 

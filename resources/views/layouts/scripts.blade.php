@@ -52,3 +52,32 @@
 
 
 </script>
+
+<script type="text/javascript">
+    var frm = $('#soortWoning');
+    frm.submit(function (ev) {
+        $.ajax({
+            type: frm.attr('method'),
+            url: frm.attr('action'),
+            data: frm.serialize(),
+
+        });
+
+        ev.preventDefault();
+
+    });
+    if($('dt.procesTab.active')){
+        var index = $('dt.procesTab.active').index();
+        $('dt.procesTab').removeClass('active');
+        $('dt.procesTab').eq(index +1).addClass('active');
+        $('.rightRowDashboard span').removeClass('active');
+        $('.rightRowDashboard span').eq(index +1).addClass('active');
+        $('.buttonOrange').addClass('hidden');
+        $('.optie').removeClass('active');
+        for(var i=0; i<results.length;i++) {
+            results[i].style.display = "none";
+        }
+
+    }
+
+</script>
