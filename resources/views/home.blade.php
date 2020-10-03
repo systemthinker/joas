@@ -118,25 +118,25 @@
 
     <div class="row columsBottomRow">
         <div class="col-md-3 columsBottom">
-            <i class="fas fa-address-book fa-5x"></i>
+            <i class="fas fa-address-book fa-4x"></i>
             <h4>Adressen</h4>
             <button class="btn btn-primary btn-block buttonBottom">Informatie</button>
         </div>
 
         <div class="col-md-3 columsBottom">
-            <i class="fab fa-android fa-5x"></i>
+            <i class="fab fa-android fa-4x"></i>
             <h4>Alles Online</h4>
             <button class="btn btn-primary btn-block buttonBottom">Informatie</button>
         </div>
 
         <div class="col-md-3 columsBottom">
-            <i class="fas fa-credit-card fa-5x"></i>
+            <i class="fas fa-credit-card fa-4x"></i>
             <h4>Betalingen</h4>
             <button class="btn btn-primary btn-block buttonBottom">Informatie</button>
         </div>
 
         <div class="col-md-3 columsBottom">
-            <i class="fas fa-info-circle fa-5x"></i>
+            <i class="fas fa-info-circle fa-4x"></i>
             <h4>Informatie</h4>
             <button class="btn btn-primary btn-block buttonBottom">Informatie</button>
         </div>

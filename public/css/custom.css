@@ -1,13 +1,10 @@
 .container-voorpagina {
-    background: linear-gradient(
-            rgba(0, 0, 0, 0.25),
-            rgba(0, 0, 0, 0.25)
-    ), url(../images/office-1.jpg) no-repeat center 0px;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url(../images/office-1.jpg) no-repeat center 0px;
     background-size: cover;
     height: 650px;
     width: 100%;
     margin-top: 10px;
-
 }
 
 #footer {
@@ -26,7 +23,7 @@
     font-size: 24px;
     font-weight: bold;
     left: 40%;
-    top: 35%;
+    top: 45%;
 }
 
 #buttonTop {
@@ -36,7 +33,7 @@
     font-size: 24px;
     font-weight: bold;
     left: 10%;
-    top: 95%;
+    top: 90%;
     background-color: #f75a00;
     border: none;
 }
@@ -47,7 +44,6 @@
 }
 
 #buttonLogin {
-
     color: white;
     font-size: 1.3em;
     font-weight: 550;
@@ -59,15 +55,10 @@
     margin-top: 2%;
 }
 
-
-
-
 * {
     padding: 0px;
     margin: 0px;
 }
-
-
 
 nav.navbar {
     padding: 0px;
@@ -76,29 +67,25 @@ nav.navbar {
     height: 150px;
 }
 
-.navbar-nav a.nav-item  {
+.navbar-nav a.nav-item {
+    color: black;
 
-    color:black;
-
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.2em;
     padding-top: 22px;
     padding-bottom: 22px;
-    border-left: 10px solid rgba(0,0,0,0);
-    border-right: 10px solid rgba(0,0,0,0);
+    border-left: 10px solid rgba(0, 0, 0, 0);
+    border-right: 10px solid rgba(0, 0, 0, 0);
     display: inline-block;
     white-space: nowrap;
     z-index: 200;
-
 }
 
 .dropdown-menu.dropdown-menu-right {
     position: fixed;
 }
 
-
 .nav-item.nav-link:hover {
-
     font-weight: bold;
     background-color: rgba(247, 121, 24, 0.22);
     border-radius: 2%;
@@ -106,40 +93,32 @@ nav.navbar {
 a.dropdown-it {
     font-weight: bold;
     font-size: 1.2em;
-
 }
 
 a.dropdown-it:hover {
     font-weight: bold;
     font-size: 1.2em;
     background-color: rgba(247, 121, 24, 0.22);
-
-
 }
 
 .dropdown-menu.dropdown-menu-right.show {
     height: 38px;
     padding: 0;
 
-    margin:0;
-
-
+    margin: 0;
 }
 
 .background {
     background-color: #f6f7f9;
-
 }
 
-nav.navbar #left-bar{
-
+nav.navbar #left-bar {
     min-width: 40%;
 }
 a.navbar-brand {
     margin-left: 20%;
 }
 .container {
-
 }
 
 img.middleRowImage {
@@ -148,21 +127,19 @@ img.middleRowImage {
 }
 
 #footer {
-    margin-top:0;
+    margin-top: 0;
     border: none;
 }
 
 .buttonMiddle {
     background-color: #f75a00;
     border: none;
-
 }
 
 .middleTitel {
     margin-top: 10px;
     text-align: left;
     font-size: 1.5em;
-
 }
 
 .bottomImage {
@@ -178,7 +155,8 @@ img.middleRowImage {
     margin-top: 50px;
     margin-left: 0;
     margin-right: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bottomImage.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/bottomImage.jpg");
     background-repeat: no-repeat;
     min-height: 400px;
     height: 100%;
@@ -197,20 +175,18 @@ img.middleRowImage {
 .columsBottom i {
     margin-left: 40%;
     margin-bottom: 4%;
-    color: #F78829;
-
+    color: #f78829;
 }
 .columsBottom i:hover {
     cursor: pointer;
     color: rgba(255, 238, 254, 0.52);
-
 }
 .columsBottom h4 {
     text-align: center;
     margin-bottom: 10%;
-    color: #F78829;
+    color: #f78829;
 }
-.columsBottom h4:hover{
+.columsBottom h4:hover {
     color: rgba(255, 238, 254, 0.52);
     cursor: pointer;
 }
@@ -243,9 +219,7 @@ img.middleRowImage {
     background: #5cb85c;
     border-radius: 5px;
     color: white;
-    margin:0;
-
-
+    margin: 0;
 }
 
 .vragenSchema {
@@ -253,17 +227,15 @@ img.middleRowImage {
     border-radius: 3px;
 }
 .vragenSchema > dl {
-margin:0;
+    margin: 0;
 }
 .vragenSchema > dl > dt > span {
-    display:inline-block;
+    display: inline-block;
     height: 40px;
     line-height: 40px;
     width: 20%;
     text-align: center;
-    background-color: rgba(92, 184, 92,0.2);
-
-
+    background-color: rgba(92, 184, 92, 0.2);
 }
 
 .vragenSchema > dl > dt > text {
@@ -273,7 +245,7 @@ margin:0;
 }
 
 .vragenSchema > dl > dt:hover {
-    background-color: rgba(0,0,0,0.15);
+    background-color: rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
 
@@ -293,11 +265,10 @@ margin:0;
     background: #5cb85c;
     border-radius: 5px;
     color: white;
-    margin:0;
+    margin: 0;
 }
 
 .optie {
-
     height: 70px;
     vertical-align: middle;
     text-align: center;
@@ -333,38 +304,38 @@ margin:0;
     font-size: 1.3em;
     font-weight: 550;
     background-color: #f75a00;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F78829), to(#f75a00));
-    background: -moz-linear-gradient(19% 75% 90deg,#f75a00, #F78829);
+    background: -webkit-gradient(
+        linear,
+        0% 0%,
+        0% 100%,
+        from(#f78829),
+        to(#f75a00)
+    );
+    background: -moz-linear-gradient(19% 75% 90deg, #f75a00, #f78829);
     height: 150%;
 }
 .buttonOrange:hover {
     background-color: white;
     color: grey;
 }
-.buttonOrange.right
- {
-
+.buttonOrange.right {
 }
 
-
-.buttonOrange.left{
-
+.buttonOrange.left {
 }
 
 .buttonOrange.hidden {
-
     display: none !important;
 }
 
 dt.procesTab.active {
-
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .rightRowDashboard {
     border: 1px solid grey;
     border-radius: 3px;
-    padding:0;
+    padding: 0;
 }
 
 .rightRowDashboard span {
@@ -380,56 +351,23 @@ span.active {
 }
 
 body:after {
-    content: 'widescreen';
+    content: "widescreen";
     display: none;
 }
 
-#navbarDropdown  {
+#navbarDropdown {
     margin-right: 30px;
-
-
 }
 
-
-@media screen and (min-width: 991px){
+@media screen and (min-width: 991px) {
     #navbarDropdownLogout {
         display: none !important;
     }
     #navbarDropdown {
-
         display: initial !important;
     }
-
 }
 
 dt.hidden {
-
     display: none !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
